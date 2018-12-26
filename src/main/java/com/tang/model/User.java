@@ -9,8 +9,8 @@ import javax.persistence.Id;
 
 import lombok.Data;
 
-@Entity
 @Data
+@Entity
 public class User implements Serializable{
 
 	private static final long serialVersionUID = -8086691690484854980L;
@@ -18,7 +18,9 @@ public class User implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	
 	private String userid;
+	
 	private String username;
 
 	public User() {
@@ -26,7 +28,6 @@ public class User implements Serializable{
 	}
 
 	public User(String userid, String username) {
-		super();
 		this.userid = userid;
 		this.username = username;
 	}

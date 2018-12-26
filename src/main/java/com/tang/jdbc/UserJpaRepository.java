@@ -1,8 +1,10 @@
-package com.tang.model;
+package com.tang.jdbc;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, Long> {
+import com.tang.model.User;
+
+public interface UserJpaRepository extends JpaRepository<User, Long> {
 
     User findByUsername(String userName);
 
