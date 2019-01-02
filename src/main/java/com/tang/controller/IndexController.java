@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.tang.jdbc.UserJpaRepository;
 import com.tang.model.User;
 import com.tang.service.BookingService;
 
 @RestController
-@RequestMapping("study")
+@RequestMapping("/study")
 public class IndexController {
 
 	@Autowired
@@ -25,7 +26,7 @@ public class IndexController {
 	private UserJpaRepository userRepository;
 
 	@GetMapping("/booking")
-	public String booking() {
+	public String booking() throws JsonProcessingException {
 		bookingService.bookFlight();
 		return "booking flight";
 	}

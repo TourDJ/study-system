@@ -1,0 +1,14 @@
+tang: #自定义的属性和值
+  simpleProp: simple
+  arrayProps: 1,2,3,4,5
+  listProp1:
+    - name: name
+      value: zhangsan
+    - name: age
+      value: 12
+  listProp2:
+    - config1: zhang
+    - config2: li
+  mapProps:
+    - name: zhangsan
+    - age: 12

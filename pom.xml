@@ -24,7 +24,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.12.RELEASE</version>
-		<relativePath /> 
+		<relativePath />
 	</parent>
 
 	<dependencies>
@@ -108,6 +108,17 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- 支持 @ConfigurationProperties 注解 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jsr310</artifactId>
+		</dependency>
 
 	</dependencies>
 
